@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "VT323", monospace;
+    
+  }
+  
+  body {
+    overflow: hidden;
+    
+  }
+  .logo{
+    width: 10px;
+    height: 10px;
+
+
+  }
+
+.open-screen{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: repeat-x;
+    background-position: top;
+    background-image: url(img/video-game-pixel-grass-blue-sky-background_237404-202.jpg);
+    animation: MinecraftBackground 165s linear infinite;
+    animation-duration: 160s; 
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: MinecraftBackground;
+    visibility: visible;
+    
+}
+
+.instruction-btn{
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.710);
+}
+
+.instructions-box{
+    
+    position: center;
+    text-align: center;
+    height: 180px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.712);
+    text-align: center;
+    color: #fff;
+    margin: 5px;
+    visibility: hidden;
+    margin-left: 40%;
+    
+}
+#mode{
+  border-radius: 10px;
+  width: 130px;
+  height: 30px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.710);
+
+}
+.start-btn{
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.710);
+  font-size: 2rem;
+}
+.main-container{
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  background-color: rgb(189, 185, 185);
+}
+
+/* left side -- Game */
+.game-container--left-side {
+  margin: 0;
+  overflow-y: hidden;
+  height: 99vh;
+}
+
+.day-screen{
+  visibility: hidden;
+  
+  height: 90vh;
+  width: 90vw;
+ 
+ 
+}
+
+.game-grid {
+  margin: 0 100px;
+  border: 1px solid black;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(25, 1fr);
+  grid-template-columns: repeat(25, 1fr);
+  background: rgb(166, 225, 248);
+}
+.soil {
+  background: url("/img/soil.jpg") no-repeat center/cover;
+  transition:  0.5s ease;
+  
+}
+
+.grass{
+  background: url("/img/grass.png");
+  transition:  0.5s ease;
+  
+
+}
+.wood{
+  background: url("/img/wood_ground.png");
+  transition:  0.5s ease;
+  
+}
+.leaves{
+  background: url("/img/leaves.png");
+  transition:  0.5s ease;
+  
+}
+.cloud{
+  background: url("/img/cloud.png");
+  transition:  0.5s ease;
+  
+}
+.stone{
+  background: url("/img/stone.png");
+}
+.black{
+  background-color: black;
+}
+
+.day-screen--left-side {
+  margin: 0;
+  overflow-y: hidden;
+  height: 99vh;
+}
+
+.box {
+  border: 1px transparent;
+}
+
+.box:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+
+/* tool box */
+.tool-box--right-side {
+  background: rgb(166, 225, 248);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+  width: 10vw;
+  height: 100vh;
+  
+}
+
+
+
+/* tools */
+.picaxe,
+.shovel,
+.axe {
+  border: black 1px solid;
+  padding: 5px;
+  width: 65px;
+  color: white;
+  text-align: center;
+  margin-top: 10%;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.picaxe:hover,
+.shovel:hover,
+.axe:hover {
+  opacity: 1;
+}
+
+.picaxe > img,
+.shovel > img,
+.axe > img {
+  width: 3.5rem;
+}
+
+.tool-box--right-side button {
+  width: 150px;
+  padding: 5px;
+  margin-top: 8px;
+}
+
+.item {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.item:hover {
+  opacity: 1;
+}
+
+.item h3 {
+  margin-top: 10px;
+  color: black;
+}
+
+
+
+@keyframes MinecraftBackground {
+    0% {
+   background-position: 0 0;
+   }
+    100% {
+   background-position: -4096px 0;
+   }
+}
